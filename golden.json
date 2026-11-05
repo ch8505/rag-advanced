@@ -2,70 +2,70 @@
   {
     "id": "q01",
     "type": "identifier",
-    "question": "What is the precise mechanism by which FastAPI resolves nested dependencies using yield, and how are exit steps handled?",
-    "target_files": ["fastapi/docs/en/docs/tutorial/dependencies/dependencies-with-yield.md"],
-    "reference_answer": "FastAPI uses Python context managers with yield for dependencies. The code before yield is executed before the path operation, and the code after yield (cleanup) is executed after the response is sent, supporting nested dependency hierarchies."
+    "question": "How do you define a custom Pydantic custom root type (RootModel) to validate a list or dict directly as the request body in FastAPI?",
+    "target_files": ["fastapi/docs/en/docs/tutorial/extra-models.md"],
+    "reference_answer": "Use RootModel from pydantic to wrap a list or dictionary, allowing FastAPI to validate and parse root-level JSON arrays or primitives."
   },
   {
     "id": "q02",
     "type": "identifier",
-    "question": "How can I configure custom OpenAPI response extensions and override default status codes globally or per router?",
-    "target_files": ["fastapi/docs/en/docs/advanced/additional-responses.md", "fastapi/docs/en/docs/tutorial/path-operation-advanced.md"],
-    "reference_answer": "You can use the responses parameter in path operation decorators to add custom status codes and metadata, or customize the OpenAPI schema generation method on the FastAPI app instance."
+    "question": "What is the exact mechanism for handling sub-dependencies that share the same dependency instance within a single request lifecycle (use_cache)?",
+    "target_files": ["fastapi/docs/en/docs/tutorial/dependencies/use-depend-same-instance.md"],
+    "reference_answer": "FastAPI caches dependency results by default during a single request, so if multiple dependencies require the same sub-dependency, it is executed only once unless use_cache=False is set."
   },
   {
     "id": "q03",
     "type": "identifier",
-    "question": "What is the structural difference between Security scopes handling in OAuth2 with scopes versus standard dependency injection?",
-    "target_files": ["fastapi/docs/en/docs/advanced/security/oauth2-scopes.md"],
-    "reference_answer": "OAuth2 with scopes integrates security scopes validation directly into the security utility dependency, allowing FastAPI to automatically check required permissions against the current user's token scopes."
+    "question": "How can I mount a separate WSGI application (like Flask or Django) inside a FastAPI application using middleware?",
+    "target_files": ["fastapi/docs/en/docs/advanced/wsgi.md"],
+    "reference_answer": "Use WSGIMiddleware from fastapi.middleware.wsgi to wrap and mount the WSGI application onto a specific path route."
   },
   {
     "id": "q04",
     "type": "paraphrase",
-    "question": "If my client sends nested JSON objects with complex lists, how do I validate deeply embedded fields without losing performance?",
-    "target_files": ["fastapi/docs/en/docs/tutorial/body-nested-models.md"],
-    "reference_answer": "Use Pydantic models nested inside other Pydantic models, allowing FastAPI and Pydantic to automatically parse, validate, and document deep JSON structures."
+    "question": "Is there a way to automatically generate and include custom JSON Schema extra metadata inside the OpenAPI documentation for specific fields?",
+    "target_files": ["fastapi/docs/en/docs/tutorial/schema-extra-example.md"],
+    "reference_answer": "Yes, using Field(json_schema_extra=...) or ConfigDict with json_schema_extra function to inject custom examples and metadata into the OpenAPI schema."
   },
   {
     "id": "q05",
     "type": "paraphrase",
-    "question": "Is there a built-in mechanism to handle large file streaming chunks asynchronously without loading everything into memory?",
-    "target_files": ["fastapi/docs/en/docs/tutorial/request-files.md", "fastapi/docs/en/docs/advanced/streaming-response.md"],
-    "reference_answer": "Yes, using UploadFile with async read chunks or returning a StreamingResponse with an async generator allows handling large files efficiently."
+    "question": "If my application runs behind a TLS termination proxy or a load balancer, how do I configure FastAPI to correctly handle HTTPS redirect schemes and secure cookies?",
+    "target_files": ["fastapi/docs/en/docs/advanced/behind-a-proxy.md"],
+    "reference_answer": "Use ForwardedHeadersMiddleware or configure proxy settings so FastAPI trusts headers like X-Forwarded-Proto for secure scheme detection."
   },
   {
     "id": "q06",
     "type": "paraphrase",
-    "question": "How do I intercept incoming requests globally to modify headers or measure execution time before reaching the route?",
-    "target_files": ["fastapi/docs/en/docs/tutorial/middleware.md"],
-    "reference_answer": "Use custom middleware by decorating or adding a middleware function using @app.middleware(\"http\") to process requests and responses globally."
+    "question": "How do I handle application startup and shutdown events using lifespan context managers instead of deprecated decorator events?",
+    "target_files": ["fastapi/docs/en/docs/tutorial/events.md"],
+    "reference_answer": "Define an async context manager function (lifespan) yielding control, and pass it directly to the FastAPI(lifespan=lifespan) application instance."
   },
   {
     "id": "q07",
     "type": "multi_source",
-    "question": "How do dependency overrides interact with testing client sessions when mocking external databases or services?",
-    "target_files": ["fastapi/docs/en/docs/tutorial/testing.md", "fastapi/docs/en/docs/advanced/advanced-dependencies.md"],
-    "reference_answer": "You can use app.dependency_overrides to replace a real dependency (like a database session) with a mock dependency during testing with TestClient."
+    "question": "How do generator dependencies with yield combine with background tasks to ensure proper cleanup timing after the response is finalized?",
+    "target_files": ["fastapi/docs/en/docs/tutorial/dependencies/dependencies-with-yield.md", "fastapi/docs/en/docs/tutorial/background-tasks.md"],
+    "reference_answer": "Background tasks run after the response is sent, but before the post-yield code in dependency context managers executes clean-up operations."
   },
   {
     "id": "q08",
     "type": "multi_source",
-    "question": "What are the configuration steps for enabling CORS middleware while supporting cookie-based authentication headers securely?",
-    "target_files": ["fastapi/docs/en/docs/tutorial/cors.md", "fastapi/docs/en/docs/security/cookies.md"],
-    "reference_answer": "Add CORSMiddleware to the app with specific allowed origins (not wildcards when credentials are true), and set allow_credentials=True alongside cookie security flags."
+    "question": "What are the exact security configuration requirements for integrating HTTP Bearer authentication alongside automated OAuth2 scopes verification?",
+    "target_files": ["fastapi/docs/en/docs/tutorial/security/http-bearer.md", "fastapi/docs/en/docs/advanced/security/oauth2-scopes.md"],
+    "reference_answer": "Combine HTTPBearer security scheme with dependency functions that check token claims and validate required scope permissions against security scopes."
   },
   {
     "id": "q09",
     "type": "no_answer",
-    "question": "How do I configure native distributed caching with Redis Cluster using FastAPI's built-in dependency injection lifecycle?",
+    "question": "How do I configure native distributed database sharding and connection pooling using FastAPI's internal async session manager?",
     "target_files": [],
     "reference_answer": "INSUFFICIENT_CONTEXT"
   },
   {
     "id": "q10",
     "type": "no_answer",
-    "question": "What is the official method to compile FastAPI routes into native C binaries using Cython for performance optimization?",
+    "question": "What is the official built-in directive to compile FastAPI templates directly into WebAssembly (Wasm) for edge computing?",
     "target_files": [],
     "reference_answer": "INSUFFICIENT_CONTEXT"
   }

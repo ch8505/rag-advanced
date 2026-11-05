@@ -1,0 +1,192 @@
+[
+  {
+    "id": "q01",
+    "type": "identifier",
+    "question": "What is the precise mechanism by which FastAPI resolves nested dependencies using yield, and how are exit steps handled?",
+    "hit": true,
+    "hit_rank": 1,
+    "reciprocal_rank": 1.0,
+    "latency_sec": 1.367,
+    "retrieved_docs": [
+      "docs/en/docs/tutorial/dependencies/dependencies-with-yield.md",
+      "docs/en/docs/tutorial/dependencies/dependencies-with-yield.md",
+      "docs/en/docs/tutorial/dependencies/dependencies-with-yield.md",
+      "docs/en/docs/tutorial/dependencies/dependencies-with-yield.md",
+      "docs/en/docs/advanced/advanced-dependencies.md",
+      "docs/en/docs/tutorial/dependencies/dependencies-with-yield.md",
+      "docs/en/docs/tutorial/dependencies/dependencies-with-yield.md",
+      "docs/en/docs/advanced/advanced-dependencies.md"
+    ]
+  },
+  {
+    "id": "q02",
+    "type": "identifier",
+    "question": "How can I configure custom OpenAPI response extensions and override default status codes globally or per router?",
+    "hit": true,
+    "hit_rank": 4,
+    "reciprocal_rank": 0.25,
+    "latency_sec": 0.256,
+    "retrieved_docs": [
+      "docs/en/docs/advanced/additional-status-codes.md",
+      "docs/en/docs/tutorial/path-operation-configuration.md",
+      "docs/en/docs/advanced/response-change-status-code.md",
+      "docs/en/docs/advanced/additional-responses.md",
+      "docs/en/docs/advanced/path-operation-advanced-configuration.md",
+      "docs/en/docs/tutorial/response-status-code.md",
+      "docs/en/docs/advanced/path-operation-advanced-configuration.md",
+      "docs/en/docs/tutorial/response-status-code.md"
+    ]
+  },
+  {
+    "id": "q03",
+    "type": "identifier",
+    "question": "What is the structural difference between Security scopes handling in OAuth2 with scopes versus standard dependency injection?",
+    "hit": true,
+    "hit_rank": 1,
+    "reciprocal_rank": 1.0,
+    "latency_sec": 0.247,
+    "retrieved_docs": [
+      "docs/en/docs/advanced/security/oauth2-scopes.md",
+      "docs/en/docs/advanced/security/oauth2-scopes.md",
+      "docs/en/docs/advanced/security/oauth2-scopes.md",
+      "docs/en/docs/advanced/security/oauth2-scopes.md",
+      "docs/en/docs/advanced/security/oauth2-scopes.md",
+      "docs/en/docs/advanced/security/oauth2-scopes.md",
+      "docs/en/docs/advanced/security/oauth2-scopes.md",
+      "docs/en/docs/advanced/security/oauth2-scopes.md"
+    ]
+  },
+  {
+    "id": "q04",
+    "type": "paraphrase",
+    "question": "If my client sends nested JSON objects with complex lists, how do I validate deeply embedded fields without losing performance?",
+    "hit": true,
+    "hit_rank": 3,
+    "reciprocal_rank": 0.3333,
+    "latency_sec": 0.253,
+    "retrieved_docs": [
+      "docs/en/docs/advanced/path-operation-advanced-configuration.md",
+      "docs/en/docs/tutorial/handling-errors.md",
+      "docs/en/docs/tutorial/body-nested-models.md",
+      "docs/en/docs/tutorial/body-nested-models.md",
+      "docs/en/docs/advanced/path-operation-advanced-configuration.md",
+      "docs/en/docs/tutorial/body-multiple-params.md",
+      "docs/en/docs/tutorial/body-multiple-params.md",
+      "docs/en/docs/tutorial/query-params-str-validations.md"
+    ]
+  },
+  {
+    "id": "q05",
+    "type": "paraphrase",
+    "question": "Is there a built-in mechanism to handle large file streaming chunks asynchronously without loading everything into memory?",
+    "hit": false,
+    "hit_rank": null,
+    "reciprocal_rank": 0.0,
+    "latency_sec": 0.254,
+    "retrieved_docs": [
+      "docs/en/docs/advanced/stream-data.md",
+      "docs/en/docs/advanced/stream-data.md",
+      "docs/en/docs/advanced/stream-data.md",
+      "docs/en/docs/advanced/stream-data.md",
+      "docs/en/docs/advanced/stream-data.md",
+      "docs/en/docs/advanced/stream-data.md",
+      "docs/en/docs/advanced/stream-data.md",
+      "docs/en/docs/advanced/stream-data.md"
+    ]
+  },
+  {
+    "id": "q06",
+    "type": "paraphrase",
+    "question": "How do I intercept incoming requests globally to modify headers or measure execution time before reaching the route?",
+    "hit": true,
+    "hit_rank": 1,
+    "reciprocal_rank": 1.0,
+    "latency_sec": 0.258,
+    "retrieved_docs": [
+      "docs/en/docs/tutorial/middleware.md",
+      "docs/en/docs/tutorial/middleware.md",
+      "docs/en/docs/tutorial/middleware.md",
+      "docs/en/docs/tutorial/cors.md",
+      "docs/en/docs/tutorial/server-sent-events.md",
+      "docs/en/docs/advanced/response-headers.md",
+      "docs/en/docs/advanced/behind-a-proxy.md",
+      "docs/en/docs/tutorial/cors.md"
+    ]
+  },
+  {
+    "id": "q07",
+    "type": "multi_source",
+    "question": "How do dependency overrides interact with testing client sessions when mocking external databases or services?",
+    "hit": true,
+    "hit_rank": 7,
+    "reciprocal_rank": 0.1429,
+    "latency_sec": 0.257,
+    "retrieved_docs": [
+      "docs/en/docs/advanced/testing-dependencies.md",
+      "docs/en/docs/advanced/testing-dependencies.md",
+      "docs/en/docs/advanced/testing-dependencies.md",
+      "docs/en/docs/advanced/testing-websockets.md",
+      "docs/en/docs/advanced/testing-dependencies.md",
+      "docs/en/docs/advanced/settings.md",
+      "docs/en/docs/advanced/advanced-dependencies.md",
+      "docs/en/docs/advanced/advanced-dependencies.md"
+    ]
+  },
+  {
+    "id": "q08",
+    "type": "multi_source",
+    "question": "What are the configuration steps for enabling CORS middleware while supporting cookie-based authentication headers securely?",
+    "hit": true,
+    "hit_rank": 1,
+    "reciprocal_rank": 1.0,
+    "latency_sec": 0.257,
+    "retrieved_docs": [
+      "docs/en/docs/tutorial/cors.md",
+      "docs/en/docs/advanced/response-headers.md",
+      "docs/en/docs/tutorial/cors.md",
+      "docs/en/docs/tutorial/cors.md",
+      "docs/en/docs/tutorial/middleware.md",
+      "docs/en/docs/tutorial/cors.md",
+      "docs/en/docs/advanced/strict-content-type.md",
+      "docs/en/docs/advanced/middleware.md"
+    ]
+  },
+  {
+    "id": "q09",
+    "type": "no_answer",
+    "question": "How do I configure native distributed caching with Redis Cluster using FastAPI's built-in dependency injection lifecycle?",
+    "hit": false,
+    "hit_rank": null,
+    "reciprocal_rank": 0.0,
+    "latency_sec": 0.26,
+    "retrieved_docs": [
+      "docs/en/docs/advanced/settings.md",
+      "docs/en/docs/advanced/settings.md",
+      "docs/en/docs/tutorial/dependencies/sub-dependencies.md",
+      "docs/en/docs/advanced/settings.md",
+      "docs/en/docs/tutorial/dependencies/sub-dependencies.md",
+      "docs/en/docs/tutorial/path-params.md",
+      "docs/en/docs/advanced/settings.md",
+      "docs/en/docs/advanced/settings.md"
+    ]
+  },
+  {
+    "id": "q10",
+    "type": "no_answer",
+    "question": "What is the official method to compile FastAPI routes into native C binaries using Cython for performance optimization?",
+    "hit": false,
+    "hit_rank": null,
+    "reciprocal_rank": 0.0,
+    "latency_sec": 0.446,
+    "retrieved_docs": [
+      "docs/en/docs/tutorial/bigger-applications.md",
+      "docs/en/docs/tutorial/frontend.md",
+      "docs/en/docs/tutorial/frontend.md",
+      "docs/en/docs/tutorial/bigger-applications.md",
+      "docs/en/docs/tutorial/bigger-applications.md",
+      "docs/en/docs/tutorial/bigger-applications.md",
+      "docs/en/docs/tutorial/first-steps.md",
+      "docs/en/docs/advanced/openapi-callbacks.md"
+    ]
+  }
+]
