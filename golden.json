@@ -1,0 +1,72 @@
+[
+  {
+    "id": "q01",
+    "type": "identifier",
+    "question": "How does FastAPI's Depends function declare and execute a dependency?",
+    "target_files": ["fastapi/docs/en/docs/tutorial/dependencies/index.md"],
+    "reference_answer": "Pass the dependency callable to Depends without calling it. FastAPI resolves it and injects its result into the path operation or another dependency."
+  },
+  {
+    "id": "q02",
+    "type": "identifier",
+    "question": "How should I use HTTPException when an item ID does not exist?",
+    "target_files": ["fastapi/docs/en/docs/tutorial/handling-errors.md"],
+    "reference_answer": "Raise HTTPException rather than returning it, with status_code=404 and an optional detail such as \"Item not found\". Raising it stops the request and sends an error response."
+  },
+  {
+    "id": "q03",
+    "type": "identifier",
+    "question": "What form fields does OAuth2PasswordRequestForm provide, and how is it used in a login endpoint?",
+    "target_files": ["fastapi/docs/en/docs/tutorial/security/simple-oauth2.md"],
+    "reference_answer": "OAuth2PasswordRequestForm is a class dependency that declares form data including username and password. Use it with Depends in the token path operation; its instance also provides scopes. It does not enforce grant_type=password—use OAuth2PasswordRequestFormStrict for that."
+  },
+  {
+    "id": "q04",
+    "type": "paraphrase",
+    "question": "If a requested item is missing, how can my API respond with a not-found error instead of continuing?",
+    "target_files": ["fastapi/docs/en/docs/tutorial/handling-errors.md"],
+    "reference_answer": "Raise HTTPException with status_code=404. You can include a detail message, for example \"Item not found\"."
+  },
+  {
+    "id": "q05",
+    "type": "paraphrase",
+    "question": "Can I restrict a path segment to values matching a regular expression, and what validation declaration should I use?",
+    "target_files": ["fastapi/docs/en/docs/tutorial/path-params-numeric-validations.md", "fastapi/docs/en/docs/tutorial/query-params-str-validations.md"],
+    "reference_answer": "Use Path for a path parameter; it supports the same validation options as Query. Query documents the pattern argument for requiring a string parameter to match a regular expression."
+  },
+  {
+    "id": "q06",
+    "type": "paraphrase",
+    "question": "How can I return a response immediately and do small follow-up work, such as sending a notification, afterward?",
+    "target_files": ["fastapi/docs/en/docs/tutorial/background-tasks.md"],
+    "reference_answer": "Declare a BackgroundTasks parameter and add work with background_tasks.add_task(function, ...). FastAPI runs the task after the response is sent. For heavy work across processes or servers, the docs suggest considering a tool such as Celery."
+  },
+  {
+    "id": "q07",
+    "type": "multi_source",
+    "question": "How do Query and Path differ, and can both be used to validate parameter values?",
+    "target_files": ["fastapi/docs/en/docs/tutorial/query-params-str-validations.md", "fastapi/docs/en/docs/tutorial/path-params-numeric-validations.md"],
+    "reference_answer": "Query is used for query parameters and Path for path parameters. Both support validation and metadata; Path parameters are always required. Query's string validation options include pattern, and Path supports the same validation options."
+  },
+  {
+    "id": "q08",
+    "type": "multi_source",
+    "question": "What are the main steps in the documented OAuth2 password-flow example for adding JWT authentication to a FastAPI app?",
+    "target_files": ["fastapi/docs/en/docs/tutorial/security/simple-oauth2.md", "fastapi/docs/en/docs/tutorial/security/oauth2-jwt.md"],
+    "reference_answer": "The example receives username and password as form data using OAuth2PasswordRequestForm, verifies the user credentials, and returns a token. The JWT guide adds password hashing with pwdlib and JWT creation and verification with PyJWT, including signing the token with a secret key and algorithm."
+  },
+  {
+    "id": "q09",
+    "type": "no_answer",
+    "question": "How do I implement GraphQL WebSocket subscriptions with FastAPI?",
+    "target_files": [],
+    "reference_answer": "INSUFFICIENT_CONTEXT"
+  },
+  {
+    "id": "q10",
+    "type": "no_answer",
+    "question": "How do I deploy a FastAPI application using a Kubernetes Helm chart?",
+    "target_files": [],
+    "reference_answer": "INSUFFICIENT_CONTEXT"
+  }
+]
